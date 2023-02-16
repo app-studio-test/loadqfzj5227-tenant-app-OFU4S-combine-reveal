@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadqfzj5227-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadqfzj5227-tenant-component
+    app.kubernetes.io/part-of: loadqfzj5227-tenant-app
+  name: loadqfzj5227-tenant-component
+  namespace: loadqfzj5227-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadqfzj5227-tenant-component
+    weight: null
+status: {}
